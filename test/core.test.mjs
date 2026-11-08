@@ -132,6 +132,31 @@ test("purchase parser rejects rental-only chalets but preserves tenanted sale wa
     180,
   );
 });
+test("polling updates results without overwriting unsaved form controls; saved refresh repopulates", async () => {
+  const source = readFileSync(
+      new URL("../public/app.js", import.meta.url),
+      "utf8",
+    ),
+    load = source.match(/async function load\([^\n]+/)[0];
+  let fills = 0,
+    renders = 0;
+  const context = vm.createContext({
+    state: undefined,
+    api: async () => ({ settings: defaults }),
+    fill: () => fills++,
+    render: () => renders++,
+    toast: () => {},
+  });
+  vm.runInContext(load, context);
+  await context.load();
+  assert.equal(fills, 1);
+  await context.load();
+  assert.equal(fills, 1);
+  await context.load(true);
+  assert.equal(fills, 2);
+  assert.equal(renders, 3);
+  assert(!source.match(/function render\(\)\{fill/));
+});
 test("delivery is single-flight and retries failures once on the next flush", async () => {
   let resolve,
     attempts = 0,

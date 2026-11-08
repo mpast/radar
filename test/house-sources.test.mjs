@@ -136,3 +136,48 @@ test("a malformed nearby-town response preserves an earlier valid town without p
     report.diagnostics.sources.some((s) => s.name.includes("Arganda") && !s.ok),
   );
 });
+test("direct-house empty-state action refreshes houses instead of opening paid-provider settings", () => {
+  const source = readFileSync(
+      new URL("../public/app.js", import.meta.url),
+      "utf8",
+    ),
+    handler = source.match(
+      /if\(\$\('#connectProvider'\)\)\$\('#connectProvider'\)\.onclick=[^;]+;/,
+    )[0];
+  for (const mode of ["direct", "indexed"]) {
+    let refresh = 0,
+      settings = 0;
+    const button = {},
+      context = vm.createContext({
+        house: true,
+        state: { settings: { houseSearchMode: mode } },
+        openSettings: () => settings++,
+        $: (selector) =>
+          selector === "#connectProvider" ? button : { click: () => refresh++ },
+      });
+    vm.runInContext(handler, context);
+    button.onclick();
+    assert.equal(refresh, mode === "direct" ? 1 : 0);
+    assert.equal(settings, mode === "indexed" ? 1 : 0);
+  }
+});
+
+test("direct-house empty-state paragraph instructs refresh even without a paid provider key", () => {
+  const source = readFileSync(
+      new URL("../public/app.js", import.meta.url),
+      "utf8",
+    ),
+    expression = source.match(/<p>\$\{(tab==='saved'[^}]+)\}<\/p>/)[1];
+  for (const mode of ["direct", "indexed"]) {
+    const text = vm.runInNewContext(expression, {
+      tab: "houses",
+      house: true,
+      state: {
+        settings: { houseSearchMode: mode },
+        configured: { provider: false },
+      },
+    });
+    assert.equal(text.startsWith("Pulsa Actualizar"), mode === "direct");
+    assert.equal(text.startsWith("Conecta el proveedor"), mode === "indexed");
+  }
+});

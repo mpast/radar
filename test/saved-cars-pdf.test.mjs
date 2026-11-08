@@ -283,3 +283,49 @@ test("missing, failed and timed-out photos resolve without blocking PDF download
     globalThis.clearTimeout = original.clearTimeout;
   }
 });
+
+test("export button prevents duplicate clicks and restores itself after async errors", async () => {
+  const { readFileSync } = await import("node:fs"),
+    { default: vm } = await import("node:vm");
+  const source = readFileSync(
+      new URL("../public/app.js", import.meta.url),
+      "utf8",
+    ),
+    handler = source.match(
+      /\$\('#downloadSavedCars'\)\.onclick=(async\(\)=>\{.+?\});\$\('#sort'\)/,
+    )[1];
+  let reject,
+    resolve,
+    calls = 0;
+  const busy = [],
+    messages = [];
+  const context = vm.createContext({
+    pdfBusy: false,
+    state: { items: [car] },
+    render: () => busy.push(context.pdfBusy),
+    toast: (message) => messages.push(message),
+    downloadSavedCarsPdf: () => {
+      calls++;
+      return new Promise((res, rej) => {
+        resolve = res;
+        reject = rej;
+      });
+    },
+  });
+  const click = vm.runInContext("(" + handler + ")", context),
+    pending = click();
+  await click();
+  assert.equal(calls, 1);
+  assert.equal(context.pdfBusy, true);
+  reject(Error("No se pudo crear el PDF"));
+  await pending;
+  assert.equal(context.pdfBusy, false);
+  assert.deepEqual(messages, ["No se pudo crear el PDF"]);
+  assert.deepEqual(busy, [true, false]);
+  const second = click();
+  resolve({ missingPhotos: 1 });
+  await second;
+  assert.equal(calls, 2);
+  assert(messages[1].includes("1 fichas sin foto"));
+  assert.equal(context.pdfBusy, false);
+});

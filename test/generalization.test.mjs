@@ -296,3 +296,35 @@ test("a province mention never overwrites a known municipality or bypasses radiu
   assert.equal(other.items[0].distance, null);
   assert.equal(other.diagnostics.matching, 0);
 });
+
+test("refresh repopulates canonical filters after a postcode change before the next refresh", async () => {
+  const { default: vm } = await import("node:vm");
+  const source = readFileSync(
+      new URL("../public/app.js", import.meta.url),
+      "utf8",
+    ),
+    handler = source.match(
+      /\$\('#refresh'\)\.onclick=(async\(\)=>\{.+?\});\$\('#filters'\)/,
+    )[1];
+  let town = "madrid",
+    canonicalTown = "madrid",
+    saves = [];
+  const context = vm.createContext({
+    demo: false,
+    tab: "cars",
+    $: () => ({ reportValidity: () => true }),
+    saveFilters: async () => {
+      saves.push(town);
+      canonicalTown = "";
+    },
+    api: async () => ({ ok: true }),
+    toast: () => {},
+    load: async (repopulate) => {
+      if (repopulate) town = canonicalTown;
+    },
+  });
+  const click = vm.runInContext("(" + handler + ")", context);
+  await click();
+  await click();
+  assert.deepEqual(saves, ["madrid", ""]);
+});
