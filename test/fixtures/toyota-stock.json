@@ -1,0 +1,79 @@
+{
+  "id": "83e4add2-45c3-43d0-80e6-4a90d3011853",
+  "vehicleStatus": {
+    "code": "1",
+    "description": "Disponible"
+  },
+  "mileage": {
+    "value": 12462,
+    "unit": {
+      "code": "5",
+      "description": "Km."
+    }
+  },
+  "history": {
+    "registrationDate": "2025-04-08",
+    "localRegistrationDate": null,
+    "previousAccident": null,
+    "previousOwners": null,
+    "previousUsage": {
+      "code": "CPY",
+      "description": "Empresa"
+    },
+    "events": []
+  },
+  "price": {
+    "sellingPriceInclVAT": 16290,
+    "sellingPriceExclVAT": 0,
+    "onTheRoadPrice": 0,
+    "pricingSource": {
+      "code": "MANUAL_PRICING",
+      "description": "Pricing by dealer"
+    }
+  },
+  "currencyCode": "EUR",
+  "product": {
+    "brand": {
+      "code": "38",
+      "description": "Toyota"
+    },
+    "model": {
+      "code": "AX",
+      "description": "Aygo X"
+    },
+    "versionName": "Play MT",
+    "bodyType": "5 Puertas",
+    "transmission": {
+      "name": "Manual",
+      "gearbox": "Tracción Delantera",
+      "transmissionType": {
+        "code": "MT",
+        "description": "Manual"
+      }
+    },
+    "engine": {
+      "marketingFuelType": {
+        "code": "1",
+        "description": "Gasolina"
+      }
+    },
+    "seats": 4
+  },
+  "dealer": {
+    "id": "00CD0-E9EAD-14D94-C5400-01260-3",
+    "name": "KURUMA SPORT, S.A.U. (Madrid - Alfredo Marquerie) - Vehículos de Ocasión",
+    "address": {
+      "line1": "Alfredo Marquerie, 23",
+      "line2": "",
+      "city": "Madrid",
+      "zip": "28034",
+      "region": "MADRID",
+      "province": null,
+      "country": "ES"
+    },
+    "geoLocation": {
+      "lat": 40.48703,
+      "lon": -3.70169
+    }
+  }
+}
