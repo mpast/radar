@@ -1,0 +1,417 @@
+{
+  "initialSearch": {
+    "result": {
+      "realEstates": [
+        {
+          "id": 190386695,
+          "address": {
+            "country": "España",
+            "district": "Centro",
+            "neighborhood": null,
+            "zipCode": "28521",
+            "municipality": "Rivas-Vaciamadrid",
+            "province": "Madrid",
+            "city": "Rivas-Vaciamadrid",
+            "cityZone": null,
+            "county": "Madrid Sureste - Cuenca Tajuña",
+            "regionLevel1": "Madrid",
+            "regionLevel2": "Madrid",
+            "upperLevel": null
+          },
+          "buildingSubtype": "House_Chalet",
+          "transactionTypeId": 1,
+          "detail": {
+            "es-ES": "/es/comprar/vivienda/rivas-vaciamadrid/aire-acondicionado-calefaccion-parking-jardin-terraza-trastero-patio-piscina/190386695/d"
+          },
+          "rawPrice": 1480000,
+          "features": [
+            {
+              "key": "air_conditioner",
+              "value": 1,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "cabinets",
+              "value": 2,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "heating",
+              "value": 3,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "parking",
+              "value": 5,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "private_garden",
+              "value": 7,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "terrace",
+              "value": 10,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "storage_room",
+              "value": 11,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "yard",
+              "value": 16,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "swimming_pool",
+              "value": 17,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "household_appliances",
+              "value": 21,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "balcony",
+              "value": 32,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "jacuzzi",
+              "value": 36,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "fitness_center",
+              "value": 42,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "alarm",
+              "value": 77,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "armored_door",
+              "value": 84,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "equiped_kitchen",
+              "value": 131,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "antiquity",
+              "value": 4,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "bathrooms",
+              "value": 5,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "conservationStatus",
+              "value": 8,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "hotWater",
+              "value": 1,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "rooms",
+              "value": 5,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "surface",
+              "value": 430,
+              "maxValue": 0,
+              "minValue": 0
+            }
+          ],
+          "location": "Calle CARPANTA, Centro",
+          "isOccupied": false,
+          "isBareOwnership": false,
+          "isRentedWithTenants": false,
+          "isAuctioned": false,
+          "isPromotion": false,
+          "promotionId": 0
+        },
+        {
+          "id": 190266662,
+          "address": {
+            "country": "España",
+            "district": "Urbanizaciones",
+            "neighborhood": null,
+            "zipCode": "28522",
+            "municipality": "Rivas-Vaciamadrid",
+            "province": "Madrid",
+            "city": "Rivas-Vaciamadrid",
+            "cityZone": null,
+            "county": "Madrid Sureste - Cuenca Tajuña",
+            "regionLevel1": "Madrid",
+            "regionLevel2": "Madrid",
+            "upperLevel": null
+          },
+          "buildingSubtype": "House_Chalet",
+          "transactionTypeId": 1,
+          "detail": {
+            "es-ES": "/es/comprar/vivienda/rivas-vaciamadrid/aire-acondicionado-calefaccion-parking-jardin-terraza-trastero-piscina-no-amueblado/190266662/d"
+          },
+          "rawPrice": 599900,
+          "features": [
+            {
+              "key": "air_conditioner",
+              "value": 1,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "cabinets",
+              "value": 2,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "heating",
+              "value": 3,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "parking",
+              "value": 5,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "private_garden",
+              "value": 7,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "terrace",
+              "value": 10,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "storage_room",
+              "value": 11,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "balcony",
+              "value": 32,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "armored_door",
+              "value": 84,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "community_pool",
+              "value": 94,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "not_furnished",
+              "value": 130,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "bathrooms",
+              "value": 2,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "conservationStatus",
+              "value": 2,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "rooms",
+              "value": 3,
+              "maxValue": 0,
+              "minValue": 0
+            }
+          ],
+          "location": "Calle de los Pinos, Urbanizaciones",
+          "isOccupied": false,
+          "isBareOwnership": false,
+          "isRentedWithTenants": false,
+          "isAuctioned": false,
+          "isPromotion": false,
+          "promotionId": 0
+        },
+        {
+          "id": 190694850,
+          "address": {
+            "country": "España",
+            "district": "Urbanizaciones",
+            "neighborhood": null,
+            "zipCode": "28522",
+            "municipality": "Rivas-Vaciamadrid",
+            "province": "Madrid",
+            "city": "Rivas-Vaciamadrid",
+            "cityZone": null,
+            "county": "Madrid Sureste - Cuenca Tajuña",
+            "regionLevel1": "Madrid",
+            "regionLevel2": "Madrid",
+            "upperLevel": null
+          },
+          "buildingSubtype": "House_Chalet",
+          "transactionTypeId": 1,
+          "detail": {
+            "es-ES": "/es/comprar/vivienda/rivas-vaciamadrid/aire-acondicionado-zona-comunitaria-patio-amueblado-piscina/190694850/d"
+          },
+          "rawPrice": 770000,
+          "features": [
+            {
+              "key": "air_conditioner",
+              "value": 1,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "cabinets",
+              "value": 2,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "community_zone",
+              "value": 12,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "kitchen_office",
+              "value": 15,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "yard",
+              "value": 16,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "furnished",
+              "value": 19,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "sport_area",
+              "value": 82,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "childrens_zone",
+              "value": 83,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "community_pool",
+              "value": 94,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "equiped_kitchen",
+              "value": 131,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "antiquity",
+              "value": 5,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "bathrooms",
+              "value": 3,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "conservationStatus",
+              "value": 2,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "orientation",
+              "value": 4,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "rooms",
+              "value": 4,
+              "maxValue": 0,
+              "minValue": 0
+            },
+            {
+              "key": "surface",
+              "value": 217,
+              "maxValue": 0,
+              "minValue": 0
+            }
+          ],
+          "location": "Calle Picos de Urbión, Urbanizaciones",
+          "isOccupied": false,
+          "isBareOwnership": false,
+          "isRentedWithTenants": false,
+          "isAuctioned": false,
+          "isPromotion": false,
+          "promotionId": 0
+        }
+      ]
+    }
+  },
+  "closeZones": []
+}
