@@ -9,3 +9,9 @@
 .search-start{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;padding:22px 24px;border:1px solid #cbd9bc;border-radius:12px;background:#e9eedf}.search-location{display:flex;align-items:center;gap:24px;min-width:0}.search-location label{font-size:12px;color:#34533b;flex-shrink:0}.search-location input{width:150px;font-size:19px;font-weight:600;letter-spacing:2px;padding:12px 14px}.search-location p{max-width:360px;margin:0;font-size:12px;color:#546a4a;line-height:1.6}.search-tracking{display:flex;flex-direction:column;align-items:stretch;gap:9px;flex-shrink:0}.search-tracking>span{text-align:center;font-size:11px;color:#526847}.search-tracking .button{font-size:15px;padding:14px 28px;white-space:nowrap}.search-start+.intro{padding-top:30px}@media(max-width:1050px){.search-location{align-items:flex-start;flex-direction:column;gap:10px}}@media(max-width:600px){.search-start{flex-direction:column;align-items:stretch;padding:18px;gap:18px;margin-top:18px}.search-location{gap:12px}.search-location label,.search-location input{width:100%}.search-location p{max-width:none}.search-tracking{gap:8px}.search-tracking .button{width:100%;font-size:16px}.search-start+.intro{padding-top:24px}}
 
 #environmentalLabelHelp{max-width:210px;line-height:1.4}
+body.events-mode main > :not(header):not(#eventsSection) { display: none; }
+.events-intro { margin: 45px 0 30px; }
+.events-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 18px; margin: 25px 0; }
+.events-controls label:not(.check) { display: grid; gap: 8px; }
+.events-controls select { min-width: 200px; padding: 11px; }
+#eventsSection .cards { margin: 24px 0; }
