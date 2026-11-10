@@ -158,13 +158,14 @@ test("normal housing cards render the real proxied image and retain the fallback
     new URL("../public/app.js", import.meta.url),
     "utf8",
   )
-    .replace("tab='cars'", "tab='houses'")
     .replace(
       /import\s+\{([^}]+)\}\s+from\s+'([^']+)';/g,
       (_, names, path) => `const {${names}}=await importModule('${path}');`,
     );
   const context = vm.createContext({
     document: { querySelector: element, querySelectorAll: () => [] },
+    location: { hash: "#/viviendas" },
+    window: { addEventListener() {} },
     fetch: async () => ({ ok: true, json: async () => state }),
     setInterval() {},
     setTimeout() {},
