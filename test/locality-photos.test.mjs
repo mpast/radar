@@ -182,6 +182,8 @@ test("browser app starts with its declared module imports and renders the locali
   };
   const context = vm.createContext({
     document: { querySelector: element, querySelectorAll: () => [] },
+    location: { hash: "#/coches" },
+    window: { addEventListener() {} },
     fetch: async () => ({ ok: true, json: async () => state }),
     setInterval() {},
     setTimeout() {},
