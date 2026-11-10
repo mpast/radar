@@ -1,3 +1,4 @@
+import { searchEvents } from "./sources/events.mjs";
 import { resolvePostalCode } from "./services/location.mjs";
 import { checkMissingCars } from "./services/availability.mjs";
 import { createPhotoCache } from "./services/listing-photos.mjs";
@@ -261,6 +262,10 @@ const server = http.createServer(async (req, res) => {
     return json(res, 403, { error: "Host no permitido" });
   const path = new URL(req.url, "http://localhost").pathname;
   try {
+    if (req.method === "GET" && path === "/api/events") {
+      try { return json(res, 200, await searchEvents(settings.origin, fetch, { refresh: new URL(req.url, "http://localhost").searchParams.get("refresh") === "1" })); }
+      catch { return json(res, 503, { error: "No se pudieron consultar las fuentes de eventos. Inténtalo de nuevo." }); }
+    }
     if (req.method === "GET" && path === "/api/photo") {
       const id = new URL(req.url, "http://localhost").searchParams.get("id"),
         item = all().find((x) => x.id === id && isEligibleListing(x));

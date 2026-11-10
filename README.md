@@ -60,6 +60,10 @@ Las fotos proceden del anuncio original. Si no hay una imagen compatible o el po
 
 *La búsqueda de viviendas permite activar o desactivar «Solo chalets».*
 
+## Eventos tecnológicos
+
+En **Eventos** puedes consultar próximos eventos de ciberseguridad, programación y hackathons en España. Filtra por tipo, provincia o un radio independiente; los eventos sin coordenadas también se muestran al limitar por radio, con distancia desconocida. Las distancias son aproximadas. La búsqueda consulta [eventos.wiki](https://eventos.wiki/events/) y [Hackathon Spain](https://hackathonspain.com/calendario/); si falla el feed principal de eventos.wiki, utiliza su listado nacional, su calendario del mes actual o la agenda de ciberseguridad de [BBReports](https://bbreports.es/agenda), según disponibilidad. Algunos eventos pueden faltar. Los resultados se guardan en memoria hasta 15 minutos; **Actualizar eventos** consulta las fuentes de nuevo. Confirma fechas y condiciones en la página del evento. Datos de eventos.wiki, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 ## 4. Guardar y descargar fichas
 
 Pulsa el **corazón** de una tarjeta para añadirla a **Guardados**. Vuelve a pulsarlo para quitarla.
